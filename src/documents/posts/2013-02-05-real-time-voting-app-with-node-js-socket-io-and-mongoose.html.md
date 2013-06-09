@@ -1,8 +1,9 @@
-```
+---
 layout: default
 title: Real Time Voting App with Node.js, Socket.io and mongoDB
 date: 2013-02-05 06:58:48+00:00
-```
+tags: ['post']  
+---
 
 Tried my hand at building a real time voting app this weekend using Node.js, Socket.io and Mongoose. I had used Node.js and Socket.io before, so I was fairly familiar with them, but this was my first experience with Mongoose (and actually MongoDB as well) Some lessons learnt
 

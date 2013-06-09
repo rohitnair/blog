@@ -4,7 +4,7 @@ layout: default
 ---
 
 <ul class="linklist">
-	<% for document in @getFilesAtPath('posts').toJSON(): %>
+	<% for document in @getCollection('posts').toJSON(): %>
 		<li><span><%= document.date.toDateString() %></span>
 		&raquo;
 		<a href="<%= document.url %>"><%= document.title %></a></li>
