@@ -17,11 +17,11 @@
             <ul>
               
                 <li class=" ">
-                    <a href="/base/">About</a>
+                    <a href="/pages/about.html">About</a>
                 </li>
               
                 <li class="pure-menu-selected ">
-                    <a href="/grids/">Posts</a>
+                    <a href="/pages/posts.html">Posts</a>
                 </li>
             </ul>
         </div>
@@ -30,7 +30,12 @@
 	  <!-- Markup -->
     <div class="pure-u" id="main">
         <section id="content" class="content">
-            <%- @content %>
+            <div class="header pure-u-1">
+              <h1><%= @document.title %></h1>
+            </div>
+            <div class="content">
+              <div class="post-content"><%- @content %></div>
+            </div>
         </section>
     </div><!-- /container -->
 
