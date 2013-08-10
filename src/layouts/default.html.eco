@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
-    <link rel="stylesheet" href="http://purecss.io/combo/1.1.4?/css/main.css&/css/rainbow/baby-blue.css">
+  <!-- Our site title and description -->
+  <title><%= @getPreparedTitle() %></title>
+  <meta name="description" content="<%= @getPreparedDescription() %>" />
+  <meta name="keywords" content="<%= @getPreparedKeywords() %>" />
+  <meta name="author" content="<%= @site.author or '' %>" />
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+  <%- @getBlock('styles').add(@site.styles).toHTML() %>
 </head>
 
 <body>
+  <div class="pure-g-r " id="layout">
+    <a href="#menu" id="menuLink" class="pure-menu-link">
+      <img src="http://purecss.io/img/navicon-png2x.png" width="20" alt="Menu toggle">
+    </a>
     <div class="pure-u" id="menu">
         <div class="pure-menu pure-menu-open">
             <a class="pure-menu-heading" href="/">Rohit Nair</a>
@@ -20,14 +31,14 @@
                     <a href="/pages/about.html">About</a>
                 </li>
               
-                <li class="pure-menu-selected ">
+                <li class="">
                     <a href="/pages/posts.html">Posts</a>
                 </li>
             </ul>
         </div>
     </div>
 
-	  <!-- Markup -->
+    <!-- Markup -->
     <div class="pure-u" id="main">
         <section id="content" class="content">
             <div class="header pure-u-1">
@@ -38,9 +49,11 @@
             </div>
         </section>
     </div><!-- /container -->
+  </div>
 
-	  <!-- Scripts -->
-    <script src="http://purecss.io/combo/1.1.4?/js/ui.js&/vendor/rainbow/rainbow-min.js"></script>
+	<!-- Scripts -->
+	<%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+
 </body>
 </html>
 

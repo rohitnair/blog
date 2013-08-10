@@ -1,8 +1,14 @@
 ---
-layout: default
-title: Real Time Voting App with Node.js, Socket.io and mongoDB
+author: admin
+comments: true
 date: 2013-02-05 06:58:48+00:00
-tags: ['post']  
+layout: post
+slug: real-time-voting-app-with-node-js-socket-io-and-mongoose
+title: Real Time Voting App with Node.js, Socket.io and mongoDB
+wordpress_id: 378
+categories:
+- Tech
+tags: ['post']
 ---
 
 Tried my hand at building a real time voting app this weekend using Node.js, Socket.io and Mongoose. I had used Node.js and Socket.io before, so I was fairly familiar with them, but this was my first experience with Mongoose (and actually MongoDB as well) Some lessons learnt
@@ -26,7 +32,7 @@ Tried my hand at building a real time voting app this weekend using Node.js, Soc
 
 	
   * [Mongoose 2.7.x](http://mongoosejs.com/docs/2.7.x/docs/query.html) documentation mentions tailable cursors (for some reason the 3.5.x one does not) Fortunately, the API listed there still seemed to work. This is the code I used to react to insertions into my collection 
-```javascript
+``` javascript
 var Vote = mongoose.model('Vote');
 var stream = Vote.find().tailable().stream();
 stream.on('data', function(vote) {

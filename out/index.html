@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
-    <link rel="stylesheet" href="http://purecss.io/combo/1.1.4?/css/main.css&/css/rainbow/baby-blue.css">
+  <!-- Our site title and description -->
+  <title>Rohit Nair's Blog | Rohit Nair's Blog</title>
+  <meta name="description" content="Rohit Nair's personal blog." />
+  <meta name="keywords" content="rohit, rohit nair, nair, rohitnair, tech, programming, web development, trivia, football, food, restaurants, reviews" />
+  <meta name="author" content="Rohit Nair" />
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.1.0/pure-min.css">
+  <link  rel="stylesheet" href="/styles/blog.css" /><link  rel="stylesheet" href="/styles/solarized_dark.css" />
 </head>
 
 <body>
+  <div class="pure-g-r " id="layout">
+    <a href="#menu" id="menuLink" class="pure-menu-link">
+      <img src="http://purecss.io/img/navicon-png2x.png" width="20" alt="Menu toggle">
+    </a>
     <div class="pure-u" id="menu">
         <div class="pure-menu pure-menu-open">
             <a class="pure-menu-heading" href="/">Rohit Nair</a>
@@ -20,27 +31,170 @@
                     <a href="/pages/about.html">About</a>
                 </li>
               
-                <li class="pure-menu-selected ">
+                <li class="">
                     <a href="/pages/posts.html">Posts</a>
                 </li>
             </ul>
         </div>
     </div>
 
-	  <!-- Markup -->
+    <!-- Markup -->
     <div class="pure-u" id="main">
         <section id="content" class="content">
             <div class="header pure-u-1">
-              <h1>Home</h1>
+              <h1>Rohit Nair's Blog</h1>
             </div>
             <div class="content">
-              <div class="post-content">Some content</div>
+              <div class="post-content"><h2>The Eagle is Down</h2>
+<blockquote>
+<p>&quot;Firefox can&#39;t establish a connection to the server at <a href="http://t.co/FqE39iVA">fireeagle.yahoo.net</a>.&quot; - RIP @<a href="https://twitter.com/fireeagle">fireeagle</a></p>
+<p>-- Christian Heilmann(@codepo8) <a href="https://twitter.com/codepo8/status/303896846332477440">February 19, 2013</a></p>
+</blockquote>
+<p>Yahoo! FireEagle is finally dead. One of those little loved Yahoo! products that was way ahead of it&#39;s time (Pipes being the obvious other example). I actually loved the way it integrated with several location based services like Dopplr and Brightkite. I even had a small widget on my blog powered by it. I used to track all my trips on Dopplr, which would in turn update FireEagle. Another service called EagleFeed consumed this location from FireEagle and exposed it as an RSS feed. I then had a simple widget that would consume the RSS feed and populate the &quot;Currently At&quot; widget on my blog. This widget would, of course, automatically update whenever I actually made a trip that I had recorded on Dopplr. The whole thing was surprisingly stable and worked flawlessly all these years without a single change. The RSS feed end point actually still appears to work with possibly a cached copy of the data. I guess it&#39;s finally time to kill the widget. </p>
+<p>PS: Yahoo! &quot;Paranoids&quot; probably know why the domain was hosted off yahoo.net instead of yahoo.com :)</p>
+
+
+ 
+<a href="/posts/real-time-voting-app-with-node-js-socket-io-and-mongoose.html" class="page next">Next Post --></a>
+
+<!-- Get the next and previous document from the current document -->
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</div>
             </div>
         </section>
     </div><!-- /container -->
+  </div>
 
-	  <!-- Scripts -->
-    <script src="http://purecss.io/combo/1.1.4?/js/ui.js&/vendor/rainbow/rainbow-min.js"></script>
+	<!-- Scripts -->
+	<script >(function(){
+	/* Did we just livereload? */
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+/* Listen for the regenerated event and perform a reload of the page when the event occurs */
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		/* Inject socket.io into our page then listen once loaded */
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		var readyStateCheckInterval = setInterval(function() {
+  if (document.readyState === "complete") {
+    inject();
+    clearInterval(readyStateCheckInterval);
+  }
+}, 10);
+	}
+})();</script><script defer="defer"  src="/scripts/blog.js"></script>
+
 </body>
 </html>
 

@@ -2,12 +2,23 @@
 layout: default
 ---
 
-<div class="header pure-u-1">
-	<h1><%= @document.title %></h1>
-</div>
+<%- @content %>
 
-<div class="content">
-	<div class="post-content"><%- @content %></div>
-</div>
-
+<!-- Get the next and previous document from the current document -->
+<% for document,documentIndex in @getCollection('posts').toJSON(): %>
+  <% if @document.id is document.id: %>
+ 
+    <!-- We have the current document, do the next and previous buttons -->
+    <!-- Check if we have a previous page -->
+    <% if documentIndex >= 1: %>
+      <a href="<%= @getCollection('posts').toJSON()[documentIndex-1].url %>" class="page previous"><-- Previous Post</a>
+    <% end %>
+ 
+    <!-- Check if we have a next page -->
+    <% if documentIndex < @getCollection('posts').length - 1: %>
+      <a href="<%= @getCollection('posts').toJSON()[documentIndex+1].url %>" class="page next">Next Post --></a>
+    <% end %>
+   
+  <% end %>
+<% end %>
 

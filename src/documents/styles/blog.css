@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     color: #777;
+    line-height: 1.6em;
 }
 
 
@@ -41,6 +42,9 @@ dt {
 }
 dd {
     margin: 0 0 10px 0;
+}
+
+p {
 }
 
 /* --------------------------
@@ -312,3 +316,14 @@ aside {
     }
 }
 
+.page {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  }
+.next {
+  float: right;
+  }
+
+.previous {
+  float: left;
+  }

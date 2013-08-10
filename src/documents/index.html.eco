@@ -1,0 +1,12 @@
+---
+title: Rohit Nair's Blog
+layout: post
+---
+
+<h2><%- @getCollection('posts').toJSON()[0].title %></h2>
+<%- @getCollection('posts').toJSON()[0].contentRenderedWithoutLayouts %>
+
+ 
+<a href="<%= @getCollection('posts').toJSON()[1].url %>" class="page next">Next Post --></a>
+   
+
